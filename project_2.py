@@ -52,13 +52,18 @@ print(f"Number of validation batches: {len(val_generator)}")
 
 model = Sequential()
 
+# Convolutional layer 1
+
 model.add(Conv2D(512, (3, 3), activation='relu', strides=(1, 1), input_shape=(100, 100, 3)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
+
+# Convolutional layer 2
 
 model.add(Conv2D(64, (3, 3), activation='relu', strides=(1, 1), input_shape=(100, 100, 3)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-# Convolutional layer 2
+# Convolutional layer 3
+
 model.add(Conv2D(256, (3, 3), activation='relu',strides=(1, 1)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
